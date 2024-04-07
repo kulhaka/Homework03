@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Facebook Clone</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav_left">
+      <div class="logo">
+        <svg fill="#0866ff" width="40px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"
+            transform="translate(3.4800000000000004,3.4800000000000004), scale(0.71)">
+            <rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff" strokewidth="0"></rect>
+          </g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+            stroke-width="0.24000000000000005"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="nav-input">
+        <form>
+          <svg width="14px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#b0b3b8">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                stroke="#b0b3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </svg>
+          <input type="text" name="search" placeholder="Search Facebook:" />
+        </form>
+      </div>
+    </nav>
+    <div class="nav_center">
+      <div class="box-icon-active"><svg fill="#0866ff" width="28px" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M4,8.931V20a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V8.931a1,1,0,0,0-.441-.828L12,3,4.441,8.1A1,1,0,0,0,4,8.931ZM10,14a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1v5H10Z">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="box-icon">
+        <svg width="28px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#808080"
+          fill="none">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <rect x="9.19" y="11.28" width="47.34" height="34.38" rx="2.02"></rect>
+            <line x1="9.19" y1="39.12" x2="56.53" y2="39.12"></line>
+            <path d="M23.92,53.64a6.67,6.67,0,0,0,3.54-8"></path>
+            <path d="M42.7,53.64a6.67,6.67,0,0,1-3.54-8"></path>
+            <line x1="18.36" y1="53.64" x2="47.36" y2="53.64" stroke-linecap="round"></line>
+            <path
+              d="M29.68,31.44V19.78a.27.27,0,0,1,.41-.23l9.17,5.83a.27.27,0,0,1,0,.46l-9.17,5.82A.26.26,0,0,1,29.68,31.44Z">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="box-icon">
+        <svg fill="#808080" width="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M2.7,9.45a4.235,4.235,0,0,0,.3.3V22a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V9.752a4.235,4.235,0,0,0,.3-.3,4,4,0,0,0,.731-3.456L20.97,1.758A1,1,0,0,0,20,1H4a1,1,0,0,0-.97.758L1.972,5.994A4,4,0,0,0,2.7,9.45ZM13,21H11V16h2Zm6,0H15V15a1,1,0,0,0-1-1H10a1,1,0,0,0-1,1v6H5V10.9A3.989,3.989,0,0,0,8.914,9.61c.026.03.053.059.08.089A4.086,4.086,0,0,0,12.041,11a4.039,4.039,0,0,0,2.965-1.3c.027-.03.054-.059.08-.089A3.989,3.989,0,0,0,19,10.9ZM3.911,6.479,4.781,3H19.219l.87,3.479A2.029,2.029,0,0,1,18.12,9,2.041,2.041,0,0,1,16.1,7.14l-.042-.5a1,1,0,0,0-1.993.166v0a2.006,2.006,0,0,1-.529,1.539A2.059,2.059,0,0,1,11.959,9,2.029,2.029,0,0,1,9.937,6.806v0a1,1,0,0,0-.914-1.079.989.989,0,0,0-1.079.913l-.042.5A2.041,2.041,0,0,1,5.88,9,2.029,2.029,0,0,1,3.911,6.479Z">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="box-icon">
+        <svg fill="#808080" width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 508.00 508.00" xml:space="preserve" stroke="#808080">
+          <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+            stroke-width="3.048"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <g>
+                <path
+                  d="M108.6,143.45c-30.2,0-54.7,24.5-54.7,54.7c0,30.1,24.5,54.7,54.7,54.7c30.2,0,54.7-24.5,54.7-54.7 C163.3,167.95,138.8,143.45,108.6,143.45z M108.6,224.65c-14.6,0-26.5-11.9-26.5-26.5c-0.1-14.6,11.8-26.5,26.5-26.5 c14.6,0,26.5,11.9,26.5,26.5C135.1,212.75,123.2,224.65,108.6,224.65z">
+                </path>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M254,113.55c-31.3,0-56.8,25.5-56.8,56.8s25.5,56.8,56.8,56.8s56.8-25.5,56.8-56.8S285.3,113.55,254,113.55z M254,197.85 c-15.2,0-27.5-12.4-27.5-27.5c0-15.1,12.3-27.5,27.5-27.5s27.5,12.4,27.5,27.5C281.5,185.55,269.1,197.85,254,197.85z">
+                </path>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M399.5,143.45c-30.2,0-54.7,24.5-54.7,54.7c0,30.1,24.5,54.7,54.7,54.7s54.7-24.5,54.7-54.7 C454.2,167.95,429.7,143.45,399.5,143.45z M399.5,224.65c-14.6,0-26.5-11.9-26.5-26.5c0-14.6,11.9-26.5,26.5-26.5 c14.6,0,26.5,11.9,26.5,26.5C426,212.75,414.1,224.65,399.5,224.65z">
+                </path>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M399.5,271.85c-17.7,0-35.2,4.4-50.8,12.7c-12.1-15.3-29.3-26.4-49.4-30.4c-29.7-5.9-60.7-5.9-90.4,0 c-20,4-37.3,15.1-49.4,30.4c-15.6-8.3-33.1-12.7-50.8-12.7c-60,0-108.7,48.7-108.7,108.5c0,7.8,6.3,14.1,14.1,14.1h479.8 c7.8,0,14.1-6.3,14.1-14.1C508,320.55,459.3,271.85,399.5,271.85z M140.8,338.15v28.2H29.5c6.7-37.6,39.6-66.2,79.1-66.2 c13,0,25.7,3.3,37.1,9.2C142.5,318.35,140.8,328.05,140.8,338.15z M339,366.25H169v-28.2c0-27.4,19.1-51,45.3-56.3 c26.1-5.2,53.4-5.2,79.5,0c26.2,5.3,45.2,29,45.2,56.4V366.25z M367.3,366.25v-28.2c0-10-1.7-19.7-4.9-28.8 c11.4-6,24.2-9.2,37.2-9.2c39.5,0,72.4,28.6,79.1,66.2H367.3z">
+                </path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="box-icon">
+        <svg width="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#808080">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M6.00014 11H10.0001M8.00014 9V13M15.0001 12H15.0101M18.0001 10H18.0101M10.4491 5H13.5512C16.1761 5 17.4885 5 18.5187 5.49743C19.4257 5.9354 20.1793 6.63709 20.6808 7.51059C21.2503 8.5027 21.3438 9.81181 21.5309 12.43L21.7769 15.8745C21.8975 17.5634 20.5599 19 18.8667 19C18.0008 19 17.1796 18.6154 16.6253 17.9502L16.2501 17.5C15.907 17.0882 15.7354 16.8823 15.54 16.7159C15.1305 16.3672 14.6346 16.1349 14.1045 16.0436C13.8516 16 13.5836 16 13.0476 16H10.9527C10.4167 16 10.1487 16 9.89577 16.0436C9.36563 16.1349 8.86981 16.3672 8.46024 16.7159C8.26487 16.8823 8.09329 17.0882 7.75013 17.5L7.37497 17.9502C6.82064 18.6154 5.99949 19 5.13359 19C3.44037 19 2.10275 17.5634 2.22339 15.8745L2.46942 12.43C2.65644 9.81181 2.74994 8.5027 3.31951 7.51059C3.82098 6.63709 4.57458 5.9354 5.48159 5.49743C6.51176 5 7.8242 5 10.4491 5Z"
+              stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="nav_right">
+      <div class="right_icon">
+        <svg fill="#000000" width="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M0 0h4v4H0V0zm0 6h4v4H0V6zm0 6h4v4H0v-4zM6 0h4v4H6V0zm0 6h4v4H6V6zm0 6h4v4H6v-4zm6-12h4v4h-4V0zm0 6h4v4h-4V6zm0 6h4v4h-4v-4z"
+              fill-rule="evenodd"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="right_icon">
+        <svg fill="#000000" width="24px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"
+          stroke="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M128,24A104.02809,104.02809,0,0,0,36.811,178.041l-8.54737,29.915a16.00023,16.00023,0,0,0,19.77979,19.78027l29.916-8.54639A104.00746,104.00746,0,1,0,128,24Zm53.65674,93.65674-32,32a7.99945,7.99945,0,0,1-11.31348,0L112,123.3135,85.65674,149.65676a7.99984,7.99984,0,1,1-11.31348-11.31348l32-32a8,8,0,0,1,11.31348,0L144,132.68654l26.34326-26.34326a7.99984,7.99984,0,0,1,11.31348,11.31348Z">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="right_icon">
+        <svg width="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M8.35179 20.2418C9.19288 21.311 10.5142 22 12 22C13.4858 22 14.8071 21.311 15.6482 20.2418C13.2264 20.57 10.7736 20.57 8.35179 20.2418Z"
+              fill="#1C274C"></path>
+            <path
+              d="M18.7491 9V9.7041C18.7491 10.5491 18.9903 11.3752 19.4422 12.0782L20.5496 13.8012C21.5612 15.3749 20.789 17.5139 19.0296 18.0116C14.4273 19.3134 9.57274 19.3134 4.97036 18.0116C3.21105 17.5139 2.43882 15.3749 3.45036 13.8012L4.5578 12.0782C5.00972 11.3752 5.25087 10.5491 5.25087 9.7041V9C5.25087 5.13401 8.27256 2 12 2C15.7274 2 18.7491 5.13401 18.7491 9Z"
+              fill="#1C274C"></path>
+          </g>
+        </svg>
+      </div>
+      <div class="user_avatar">
+        <svg width="24px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fxemoji"
+          preserveAspectRatio="xMidYMid meet" fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path fill="#597B91"
+              d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+            </path>
+          </g>
+        </svg>
+      </div>
+    </div>
+    </div>
+  </header>
+  <div class="main-wrapper">
+    <div class="sidebar-left">
+      <div class="side-bar">
+        <div class="top-side">
+          <div class="top-side-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person</p>
+            </div>
+          </div>
+          <div class="top-side-item">
+            <div class="sideleft">
+              <svg fill="#22a6fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="28px" viewBox="0 0 100 100"
+                enable-background="new 0 0 100 100" xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <path
+                        d="M46.05,60.163H31.923c-0.836,0-1.513,0.677-1.513,1.513v21.934c0,0.836,0.677,1.513,1.513,1.513H46.05 c0.836,0,1.512-0.677,1.512-1.513V61.675C47.562,60.839,46.885,60.163,46.05,60.163z">
+                      </path>
+                    </g>
+                    <g>
+                      <path
+                        d="M68.077,14.878H53.95c-0.836,0-1.513,0.677-1.513,1.513v67.218c0,0.836,0.677,1.513,1.513,1.513h14.127 c0.836,0,1.513-0.677,1.513-1.513V16.391C69.59,15.555,68.913,14.878,68.077,14.878z">
+                      </path>
+                    </g>
+                    <g>
+                      <path
+                        d="M90.217,35.299H76.09c-0.836,0-1.513,0.677-1.513,1.513v46.797c0,0.836,0.677,1.513,1.513,1.513h14.126 c0.836,0,1.513-0.677,1.513-1.513V36.812C91.729,35.977,91.052,35.299,90.217,35.299z">
+                      </path>
+                    </g>
+                    <g>
+                      <path
+                        d="M23.91,35.299H9.783c-0.836,0-1.513,0.677-1.513,1.513v46.797c0,0.836,0.677,1.513,1.513,1.513H23.91 c0.836,0,1.513-0.677,1.513-1.513V36.812C25.423,35.977,24.746,35.299,23.91,35.299z">
+                      </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>ตัวจัดการโฆษณา</p>
+            </div>
+          </div>
+          <div class="top-side-item">
+            <div class="sideleft">
+              <svg width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 508 508" xml:space="preserve" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path style="fill:#25b3ff;"
+                    d="M430.9,0c-10.2,0-18.4,8.2-18.4,18.4v436.1c0,10.2,8.2,18.4,18.4,18.4c10.2,0,18.4-8.2,18.4-18.4 V18.4C449.3,8.2,441.1,0,430.9,0z">
+                  </path>
+                  <path style="fill:#F2F2F2;"
+                    d="M412.5,18.4c0-4.5,1.7-8.6,4.4-11.8L163,126.6v219.8l253.9,119.9c-2.7-3.2-4.4-7.3-4.4-11.8V18.4z">
+                  </path>
+                  <path style="fill:#F2F2F2;" d="M449.3,154v165.2c34.2-11.9,58.7-44.4,58.7-82.6S483.5,165.9,449.3,154z">
+                  </path>
+                  <path style="fill:#25b3ff;"
+                    d="M21.2,126.6C9.5,126.6,0,136,0,147.7v177.5c0,11.7,9.5,21.2,21.2,21.2H163V126.6H21.2z"></path>
+                  <path style="fill:#25b3ff;"
+                    d="M151.5,450.9l-1.1-8.2l-2.7-19.5l-2.8-19.8l-2.7-19.5l-2.8-19.8l-2.5-17.7H35.6l16.5,118.4 c3.4,24.8,24.6,43.2,49.7,43.2c26.5,0,47.6-20.3,49.9-45.5c0.2-1.5,0.2-3,0.2-4.6C152,455.6,151.8,453.2,151.5,450.9z">
+                  </path>
+                  <g>
+                    <path style="fill:#25b3ff;"
+                      d="M142.1,383.9H98.4c-5.5,0-9.9-4.5-9.9-9.9c0-5.5,4.5-9.9,9.9-9.9h40.9L142.1,383.9z"></path>
+                    <path style="fill:#25b3ff;"
+                      d="M147.6,423.2h-34.9c-5.5,0-9.9-4.4-9.9-9.9s4.4-9.9,9.9-9.9h32.2L147.6,423.2z"></path>
+                    <path style="fill:#25b3ff;"
+                      d="M152,457.9c0,1.5-0.1,3.1-0.2,4.6H127c-5.5,0-9.9-4.4-9.9-9.9s4.5-9.9,9.9-9.9h23.3l1.1,8.2 C151.8,453.2,152,455.6,152,457.9z">
+                    </path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>ศูนย์โฆษณา</p>
+            </div>
+          </div>
+          <div class="top-side-item">
+            <div class="sideleft">
+              <svg width="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#25b3ff"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"
+                transform="rotate(45)matrix(-1, 0, 0, -1, 0, 0)">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>Meta Business Suite</p>
+            </div>
+          </div>
+          <div class="top-side-item">
+            <div class="sideleft">
+              <svg width="28px" viewBox="-4.8 -4.8 57.60 57.60" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
+                  <rect x="-4.8" y="-4.8" width="57.60" height="57.60" rx="5.76" fill="#3225ef" strokewidth="0"></rect>
+                </g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>70 Basic icons by Xicons.co</title>
+                  <rect x="18" y="2" width="12" height="46" rx="2" ry="2" fill="#8084ff"></rect>
+                  <rect x="34" y="27.99" width="12" height="20.01" rx="2" ry="2" fill="#f755e9"></rect>
+                  <rect x="2" y="18" width="12" height="30" rx="2" ry="2" fill="#e6f240"></rect>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>แดชบอร์ดมืออาชีพ</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-side">
+          <div class="bottom-side-item-nothover">
+            <p>แนะนำ</p>
+          </div>
+          <div class="bottom-side-item">
+            <div class="sideleft">
+              <svg width="28px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="feedIconTitle" stroke="#22a6fb" stroke-width="1" stroke-linecap="square"
+                stroke-linejoin="miter" fill="none" color="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title id="feedIconTitle">Feed</title>
+                  <circle cx="7.5" cy="7.5" r="2.5"></circle>
+                  <path d="M22 13H2"></path>
+                  <path d="M18 6h-5m5 3h-5"></path>
+                  <path d="M5 2h14a3 3 0 0 1 3 3v17H2V5a3 3 0 0 1 3-3z"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>ฟีด</p>
+            </div>
+          </div>
+          <div class="bottom-side-item">
+            <div class="sideleft">
+              <svg fill="#ffffff" width="28px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-50.8 -50.8 609.60 609.60" xml:space="preserve"
+                stroke="#ffffff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
+                  <rect x="-50.8" y="-50.8" width="609.60" height="609.60" rx="304.8" fill="#22a6fb" strokewidth="0">
+                  </rect>
+                </g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                  stroke-width="7.112"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <path
+                        d="M108.6,143.45c-30.2,0-54.7,24.5-54.7,54.7c0,30.1,24.5,54.7,54.7,54.7c30.2,0,54.7-24.5,54.7-54.7 C163.3,167.95,138.8,143.45,108.6,143.45z M108.6,224.65c-14.6,0-26.5-11.9-26.5-26.5c-0.1-14.6,11.8-26.5,26.5-26.5 c14.6,0,26.5,11.9,26.5,26.5C135.1,212.75,123.2,224.65,108.6,224.65z">
+                      </path>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M254,113.55c-31.3,0-56.8,25.5-56.8,56.8s25.5,56.8,56.8,56.8s56.8-25.5,56.8-56.8S285.3,113.55,254,113.55z M254,197.85 c-15.2,0-27.5-12.4-27.5-27.5c0-15.1,12.3-27.5,27.5-27.5s27.5,12.4,27.5,27.5C281.5,185.55,269.1,197.85,254,197.85z">
+                      </path>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M399.5,143.45c-30.2,0-54.7,24.5-54.7,54.7c0,30.1,24.5,54.7,54.7,54.7s54.7-24.5,54.7-54.7 C454.2,167.95,429.7,143.45,399.5,143.45z M399.5,224.65c-14.6,0-26.5-11.9-26.5-26.5c0-14.6,11.9-26.5,26.5-26.5 c14.6,0,26.5,11.9,26.5,26.5C426,212.75,414.1,224.65,399.5,224.65z">
+                      </path>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M399.5,271.85c-17.7,0-35.2,4.4-50.8,12.7c-12.1-15.3-29.3-26.4-49.4-30.4c-29.7-5.9-60.7-5.9-90.4,0 c-20,4-37.3,15.1-49.4,30.4c-15.6-8.3-33.1-12.7-50.8-12.7c-60,0-108.7,48.7-108.7,108.5c0,7.8,6.3,14.1,14.1,14.1h479.8 c7.8,0,14.1-6.3,14.1-14.1C508,320.55,459.3,271.85,399.5,271.85z M140.8,338.15v28.2H29.5c6.7-37.6,39.6-66.2,79.1-66.2 c13,0,25.7,3.3,37.1,9.2C142.5,318.35,140.8,328.05,140.8,338.15z M339,366.25H169v-28.2c0-27.4,19.1-51,45.3-56.3 c26.1-5.2,53.4-5.2,79.5,0c26.2,5.3,45.2,29,45.2,56.4V366.25z M367.3,366.25v-28.2c0-10-1.7-19.7-4.9-28.8 c11.4-6,24.2-9.2,37.2-9.2c39.5,0,72.4,28.6,79.1,66.2H367.3z">
+                      </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>กลุ่ม</p>
+            </div>
+          </div>
+          <div class="bottom-side-item">
+            <div class="sideleft">
+              <svg width="28px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#25b3ff"
+                fill="none">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <rect x="9.19" y="11.28" width="47.34" height="34.38" rx="2.02"></rect>
+                  <line x1="9.19" y1="39.12" x2="56.53" y2="39.12"></line>
+                  <path d="M23.92,53.64a6.67,6.67,0,0,0,3.54-8"></path>
+                  <path d="M42.7,53.64a6.67,6.67,0,0,1-3.54-8"></path>
+                  <line x1="18.36" y1="53.64" x2="47.36" y2="53.64" stroke-linecap="round"></line>
+                  <path
+                    d="M29.68,31.44V19.78a.27.27,0,0,1,.41-.23l9.17,5.83a.27.27,0,0,1,0,.46l-9.17,5.82A.26.26,0,0,1,29.68,31.44Z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>วีดีโอ</p>
+            </div>
+          </div>
+          <div class="bottom-side-item">
+            <div class="sideleft">
+              <svg fill="#25b3ff" width="28px" viewBox="0 0 24 24" id="Outline" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>194 restore</title>
+                  <path
+                    d="M12,6a1,1,0,0,0-1,1v5a1,1,0,0,0,.293.707l3,3a1,1,0,0,0,1.414-1.414L13,11.586V7A1,1,0,0,0,12,6Z M23.812,10.132A12,12,0,0,0,3.578,3.415V1a1,1,0,0,0-2,0V5a2,2,0,0,0,2,2h4a1,1,0,0,0,0-2H4.827a9.99,9.99,0,1,1-2.835,7.878A.982.982,0,0,0,1,12a1.007,1.007,0,0,0-1,1.1,12,12,0,1,0,23.808-2.969Z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>ความทรงจำ</p>
+            </div>
+          </div>
+          <div class="bottom-side-item">
+            <div class="sideleft">
+              <svg width="28px" height="24px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>bookmark_fill [#22a6fb]</title>
+                  <desc>Created with Sketch.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Dribbble-Light-Preview" transform="translate(-265.000000, -2679.000000)" fill="#22a6fb">
+                      <g id="icons" transform="translate(56.000000, 160.000000)">
+                        <path
+                          d="M219,2521 L219,2537.998 C219,2538.889 217.923,2539.335 217.293,2538.705 L214.707,2536.119 C214.317,2535.729 213.683,2535.729 213.293,2536.119 L210.707,2538.705 C210.077,2539.335 209,2538.889 209,2537.998 L209,2521 C209,2519.895 209.895,2519 211,2519 L217,2519 C218.105,2519 219,2519.895 219,2521"
+                          id="bookmark_fill-[#22a6fb]"> </path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="sideright">
+              <p>ที่บันทึกไว้</p>
+            </div>
+          </div>
+          <div class="bottom-side-item">
+            <div class="sideleft">
+              <div class="icon-sidebar">
+                <p>&or;</p>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>ดูเพิ่มเติม</p>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-shortcut">
+          <div class="shortcut-sidebar-side-item-nothover">
+            <p>ทางลัดของคุณ</p>
+          </div>
+          <div class="shortcut-sidebar-side-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.2</p>
+            </div>
+          </div>
+          <div class="shortcut-sidebar-side-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.3</p>
+            </div>
+
+          </div>
+          <div class="shortcut-sidebar-side-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="news-feed">
+      <div class="news-feed-addstory">
+        <div class="news-feed-addstory-button">
+          <p>+</p>
+        </div>
+        <div class="news-feed-add-story-text">
+          <p>สร้างสตอรี่</p>
+          <p><span>แชร์รูปภาพหรือเขียนอะไรสักหน่อย</span></p>
+        </div>
+      </div>
+      <div class="news-feed-addpost">
+        <div class="news-feed-addpost-topbox">
+          <div class="user_avatar-news-feed">
+            <svg width="24px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fxemoji"
+              preserveAspectRatio="xMidYMid meet" fill="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path fill="#597B91"
+                  d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                </path>
+              </g>
+            </svg>
+          </div>
+          <div class="news-feed-input">
+            <form>
+              <input type="text" name="newpost" placeholder="คุณคิดอะไรอยู่ Anonymous Person" />
+            </form>
+          </div>
+        </div>
+        <div class="news-feed-addpost-bottombox">
+          <div class="news-feed-addpost-bottombox-button">
+            <svg width="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M9.5 9V15M6.5 12H12.5M16 10L18.5768 8.45392C19.3699 7.97803 19.7665 7.74009 20.0928 7.77051C20.3773 7.79703 20.6369 7.944 20.806 8.17433C21 8.43848 21 8.90095 21 9.8259V14.1741C21 15.099 21 15.5615 20.806 15.8257C20.6369 16.056 20.3773 16.203 20.0928 16.2295C19.7665 16.2599 19.3699 16.022 18.5768 15.5461L16 14M6.2 18H12.8C13.9201 18 14.4802 18 14.908 17.782C15.2843 17.5903 15.5903 17.2843 15.782 16.908C16 16.4802 16 15.9201 16 14.8V9.2C16 8.0799 16 7.51984 15.782 7.09202C15.5903 6.71569 15.2843 6.40973 14.908 6.21799C14.4802 6 13.9201 6 12.8 6H6.2C5.0799 6 4.51984 6 4.09202 6.21799C3.71569 6.40973 3.40973 6.71569 3.21799 7.09202C3 7.51984 3 8.07989 3 9.2V14.8C3 15.9201 3 16.4802 3.21799 16.908C3.40973 17.2843 3.71569 17.5903 4.09202 17.782C4.51984 18 5.07989 18 6.2 18Z"
+                  stroke="#f56b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+            <p>วีดีโอถ่ายทอดสด</p>
+          </div>
+          <div class="news-feed-addpost-bottombox-button">
+            <svg width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve"
+              fill="#ffffff" stroke="#ffffff">
+              <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
+                <rect x="-51.2" y="-51.2" width="614.40" height="614.40" rx="0" fill="#2dd25e" strokewidth="0"></rect>
+              </g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <style type="text/css">
+                  .st0 {
+                    fill: #ffffff;
+                  }
+                </style>
+                <g>
+                  <path class="st0"
+                    d="M84.523,84.523V512H512V84.523H84.523z M220.739,184.766c24.028,0,43.5,19.48,43.5,43.507 c0,24.027-19.473,43.507-43.5,43.507c-24.027,0-43.507-19.48-43.507-43.507C177.232,204.246,196.712,184.766,220.739,184.766z M463.923,407.239c-1.494,2.776-4.398,4.517-7.556,4.517H140.156c-3.151,0-6.048-1.726-7.548-4.502 c-1.501-2.777-1.359-6.153,0.375-8.787l55.311-84.276c3.669-5.59,9.732-9.154,16.403-9.627c6.679-0.472,13.185,2.192,17.612,7.212 l38.15,43.236l69.125-105.196c3.962-6.026,10.693-9.665,17.904-9.672c7.211-0.008,13.95,3.617,17.92,9.635l98.127,148.666 C465.273,401.086,465.424,404.463,463.923,407.239z">
+                  </path>
+                  <polygon class="st0" points="450.529,0 0,0 0,450.529 46.104,450.529 46.104,46.104 450.529,46.104 ">
+                  </polygon>
+                </g>
+              </g>
+            </svg>
+            <p>รูปภาพ/วีดีโอ</p>
+          </div>
+          <div class="news-feed-addpost-bottombox-button">
+            <svg width="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.98966 10.91C10.4482 10.609 11.0657 10.5541 11.6048 10.8884L14.9764 12.9785C15.5136 13.3116 15.75 13.8874 15.75 14.4102C15.75 14.933 15.5136 15.5088 14.9764 15.8418L11.6048 17.932C11.0657 18.2662 10.4482 18.2114 9.98966 17.9103C9.539 17.6144 9.25 17.0934 9.25 16.5003V12.32C9.25 11.727 9.539 11.2059 9.98966 10.91ZM10.8129 12.1639C10.7945 12.176 10.75 12.2203 10.75 12.32V16.5003C10.75 16.6 10.7945 16.6443 10.8129 16.6564L10.8142 16.6572L14.186 14.5669C14.2072 14.5538 14.25 14.5085 14.25 14.4102C14.25 14.3118 14.2072 14.2665 14.186 14.2534L10.8145 12.1633L10.8129 12.1639Z"
+                  fill="#bc3838"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.69935 1.25001C8.4795 1.24995 8.31094 1.2499 8.16359 1.26571C6.80943 1.41104 5.77295 2.52304 5.71005 3.87007C4.51917 4.22559 3.67058 5.3275 3.65528 6.5913C3.05445 6.77164 2.53621 7.05606 2.11196 7.51432C1.45997 8.21857 1.25792 9.08649 1.25023 10.1003C1.24283 11.075 1.41651 12.3067 1.63219 13.8363L2.07118 16.9499C2.23979 18.146 2.37676 19.1176 2.58989 19.879C2.81286 20.6756 3.14152 21.331 3.75003 21.8349C4.35372 22.3347 5.06993 22.5502 5.91647 22.6518C6.73501 22.75 7.76474 22.75 9.04682 22.75H14.9531C16.2352 22.75 17.265 22.75 18.0835 22.6518C18.9301 22.5502 19.6463 22.3347 20.25 21.8349C20.8585 21.331 21.1871 20.6756 21.4101 19.879C21.6232 19.1176 21.7602 18.146 21.9288 16.9499L22.3678 13.8363C22.5835 12.3067 22.7572 11.075 22.7498 10.1003C22.7421 9.08649 22.54 8.21857 21.888 7.51432C21.4637 7.05595 20.9453 6.77151 20.3443 6.59118C20.3289 5.3275 19.4805 4.22571 18.2897 3.87013C18.2268 2.52307 17.1903 1.41104 15.8362 1.26571C15.6888 1.2499 15.5203 1.24995 15.3004 1.25001H8.69935ZM18.8105 6.32781C18.6734 5.72018 18.1306 5.25001 17.4617 5.25001H6.53787C5.86896 5.25001 5.32618 5.72019 5.18902 6.32785C6.11481 6.24999 7.24973 6.25 8.61594 6.25001H15.384C16.75 6.25 17.8848 6.24999 18.8105 6.32781ZM16.7677 3.75001C16.6611 3.22633 16.2263 2.8162 15.6761 2.75715C15.6198 2.75111 15.5396 2.75001 15.2588 2.75001H8.74099C8.46013 2.75001 8.37993 2.75111 8.32365 2.75715C7.77344 2.8162 7.33862 3.22633 7.2321 3.75001H16.7677ZM3.21267 8.53336C3.51557 8.20618 3.97106 7.98917 4.85612 7.87145C5.75726 7.75159 6.96357 7.75001 8.67239 7.75001H15.3276C17.0364 7.75001 18.2427 7.75159 19.1439 7.87145C20.0289 7.98917 20.4844 8.20618 20.7873 8.53336C21.0832 8.85293 21.2436 9.28782 21.2498 10.1117C21.2563 10.9618 21.1002 12.0828 20.8738 13.6883L20.4509 16.6883C20.2731 17.9491 20.1486 18.821 19.9656 19.4747C19.7894 20.1042 19.582 20.4405 19.2934 20.6795C18.9999 20.9225 18.6058 21.0784 17.9048 21.1625C17.1861 21.2488 16.2465 21.25 14.9046 21.25H9.09536C7.75347 21.25 6.81393 21.2488 6.09519 21.1625C5.39417 21.0784 5.00014 20.9225 4.70664 20.6795C4.41795 20.4405 4.21058 20.1042 4.03437 19.4747C3.8514 18.821 3.7269 17.9491 3.54913 16.6883L3.12616 13.6883C2.89981 12.0828 2.74373 10.9618 2.75018 10.1117C2.75644 9.28782 2.91681 8.85293 3.21267 8.53336Z"
+                  fill="#bc3838"></path>
+              </g>
+            </svg>
+            <p>คลิป Reels</p>
+          </div>
+        </div>
+      </div>
+      <div class="news-feed-showedpost">
+        <div class="post-firstbox">
+          <div class="post-firstbox-left">
+            <div class="user_avatar-news-feed">
+              <svg width="24px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path fill="#597B91"
+                    d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <div class="post-firstbox-left-text">
+              <p>Anonymous Person No. 420</p>
+              <div class="post-firstbox-left-text-bottom">
+                <span class="post-date">5 วัน</span>
+                <span>&#183;</span>
+                <svg width="16px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3"
+                  stroke="#777777" fill="none">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <circle cx="22.83" cy="22.57" r="7.51"></circle>
+                    <path d="M38,49.94a15.2,15.2,0,0,0-15.21-15.2h0a15.2,15.2,0,0,0-15.2,15.2Z"></path>
+                    <circle cx="44.13" cy="27.22" r="6.05"></circle>
+                    <path d="M42.4,49.94h14A12.24,12.24,0,0,0,44.13,37.7h0a12.21,12.21,0,0,0-5.75,1.43"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="post-firstbox-right">
+            <div class="post-firstbox-right-icon">
+              <p>&#183;&#183;&#183;</p>
+            </div>
+            <div class="post-firstbox-right-icon">
+              <p>&#10006;</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-secondbox">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ab inventore autem vitae a. Labore
+            dignissimos sit aliquam ipsam sequi ullam temporibus qui, ipsum repudiandae molestiae, sed vero, quod ipsa!
+          </p>
+        </div>
+        <div class="post-thirdbox">
+          <img src="/img/post.jpg" />
+        </div>
+        <div class="post-fourthbox">
+          <div class="line-fourthbox">
+            <div class="post-fourthbox-left">
+              <img src="./img/like.png" width="16px" height="16px" />
+              <img src="./img/haha.png" width="16px" height="16px" />
+              <p>69</p>
+            </div>
+            <div class="post-fourthbox-right">
+              <p>6 ความคิดเห็น </p>
+              <p>แชร์ 9 ครั้ง</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-fifthbox">
+          <div class="fifthbox-button">
+            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/LWBsVfMracP.png&quot;); background-position: 0px -739px; background-size: 25px 1440px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+            <p>ถูกใจ</p>
+          </div>
+          <div class="fifthbox-button">
+            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/LWBsVfMracP.png&quot;); background-position: 0px -550px; background-size: 25px 1440px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+            <p>แสดงความคิดเห็น</p>
+          </div>
+          <div class="fifthbox-button">
+            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/LWBsVfMracP.png&quot;); background-position: 0px -886px; background-size: 25px 1440px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+            <p>แชร์</p>
+          </div>
+        </div>
+      </div>
+      <div class="news-feed-showedpost">
+        <div class="post-firstbox">
+          <div class="post-firstbox-left">
+            <div class="user_avatar-news-feed">
+              <svg width="24px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path fill="#597B91"
+                    d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <div class="post-firstbox-left-text">
+              <p>Anonymous Person No. 420</p>
+              <div class="post-firstbox-left-text-bottom">
+                <span class="post-date">5 วัน</span>
+                <span>&#183;</span>
+                <svg width="16px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3"
+                  stroke="#777777" fill="none">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <circle cx="22.83" cy="22.57" r="7.51"></circle>
+                    <path d="M38,49.94a15.2,15.2,0,0,0-15.21-15.2h0a15.2,15.2,0,0,0-15.2,15.2Z"></path>
+                    <circle cx="44.13" cy="27.22" r="6.05"></circle>
+                    <path d="M42.4,49.94h14A12.24,12.24,0,0,0,44.13,37.7h0a12.21,12.21,0,0,0-5.75,1.43"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="post-firstbox-right">
+            <div class="post-firstbox-right-icon">
+              <p>&#183;&#183;&#183;</p>
+            </div>
+            <div class="post-firstbox-right-icon">
+              <p>&#10006;</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-secondbox">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ab inventore autem vitae a. Labore
+            dignissimos sit aliquam ipsam sequi ullam temporibus qui, ipsum repudiandae molestiae, sed vero, quod ipsa!
+          </p>
+        </div>
+        <div class="post-thirdbox">
+          <img src="/img/post.jpg" />
+        </div>
+        <div class="post-fourthbox">
+          <div class="line-fourthbox">
+            <div class="post-fourthbox-left">
+              <img src="./img/like.png" width="16px" height="16px" />
+              <img src="./img/haha.png" width="16px" height="16px" />
+              <p>69</p>
+            </div>
+            <div class="post-fourthbox-right">
+              <p>6 ความคิดเห็น </p>
+              <p>แชร์ 9 ครั้ง</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-fifthbox">
+          <div class="fifthbox-button">
+            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/LWBsVfMracP.png&quot;); background-position: 0px -739px; background-size: 25px 1440px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+            <p>ถูกใจ</p>
+          </div>
+          <div class="fifthbox-button">
+            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/LWBsVfMracP.png&quot;); background-position: 0px -550px; background-size: 25px 1440px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+            <p>แสดงความคิดเห็น</p>
+          </div>
+          <div class="fifthbox-button">
+            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1"
+              style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/LWBsVfMracP.png&quot;); background-position: 0px -886px; background-size: 25px 1440px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+            <p>แชร์</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-right">
+      <div class="side-bar">
+        <div class="top-side">
+          <div class="top-side-item-nothover">
+            <p>ได้รับการสนับสนุน</p>
+          </div>
+          <div class="top-side-item-ad">
+            <img src="/img/ad.jpg" />
+            <div class="text-ad">
+              <p>Dogdogdog</p>
+              <span>doggggggg.com</span>
+            </div>
+          </div>
+          <div class="top-side-item-ad">
+            <img src="/img/ad.jpg" />
+            <div class="text-ad">
+              <p>Dogdogdog</p>
+              <span>doggggggg.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="birthday-tab">
+          <div class="birthday-tab-item-nothover">
+            <p>วันเกิด</p>
+          </div>
+          <div class="birthday-tab-item">
+            <div class="sideleft">
+              <i data-visualcompletion="css-img" class="x1b0d499 xl1xv1r" aria-hidden="true"
+                style="height: 36px; width: 36px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/tIgTWaivCoy.png?_nc_eui2=AeGi_xF5yAPX2-Qyn-7ibvprs_Sg92Yk1mez9KD3ZiTWZ261zP6DwIqRjes3BCjObfw&quot;); background-position: 0px 0px; background-size: 38px 56px; background-repeat: no-repeat; display: inline-block;"></i>
+            </div>
+            <div class="sideright">
+              <p>วันนี้เป็นวันเกิดของ Anonymous Person 99</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-tab">
+          <div class="contact-tab-item-nothover">
+            <p>ผู้ติดต่อ</p>
+          </div>
+          <div class="contact-tab-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.2</p>
+            </div>
+          </div>
+          <div class="contact-tab-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.3</p>
+            </div>
+          </div>
+          <div class="contact-tab-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.4</p>
+            </div>
+          </div>
+          <div class="contact-tab-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.5</p>
+            </div>
+          </div>
+          <div class="contact-tab-item">
+            <div class="sideleft">
+              <div class="user_avatar">
+                <svg width="12px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                  class="iconify iconify--fxemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="#597B91"
+                      d="M49.6 56c0-3.2-.4-4-3.9-4.3c-.6 0-1-.5-1-1.1V49c0-.4.2-.8.6-1c4.3-2.9 7.1-7.8 7.1-13.3l.1-.7c.1-.5.5-.9 1-1c1.4-.3 2.6-1.4 2.9-2.8c.4-2.1-1-3.9-2.9-4.3c-.3-.1-.5-.4-.5-.7l.4-6.4c.2-24.5-35.3-24.8-35.5-.4l.6 7c0 .3-.1.5-.4.6c-1.6.6-2.7 2.4-2.2 4.3c.3 1.3 1.6 2.2 3 2.6c.6.1 1 .6 1 1.2v.6c0 5.6 2.9 10.6 7.3 13.5c.2.1.3.3.3.5v2c0 .5-.4 1-1 1c-3.6.2-4 1.1-4.1 4.2c-.1.1-.2.3-.3.4c-6 2.5-10.4 6.1-10.2 14.8c0 .5.4.9 1 .9h46.2c.5 0 1-.4 1-.9c.1-8.7-4.1-12-10.1-14.6c-.1-.2-.2-.3-.4-.5z">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="sideright">
+              <p>Anonymous Person No.6</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
